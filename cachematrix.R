@@ -1,4 +1,5 @@
-## davidstup version   01/2/2015
+## davidstup version
+## 01/2/2015
 
 ## makeCacheMatrix creates a list, in order to create the matrix
 
