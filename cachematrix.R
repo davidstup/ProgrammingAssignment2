@@ -29,16 +29,16 @@ makeCacheMatrix <- function(x = matrix())
 ## cacheSolve funciton returns the created matrix, or the cached version
 cacheSolve <- function(x, ...) {
   m <- x$getsolve()
-## if m is already assigned from the makeCacheMatrix function, use the value (cache) instead of recreating
+## if m is already assigned (not null) from the makeCacheMatrix function, use the value (cache) instead of recreating
   if(!is.null(m)) 
   {
-    message("get cached data")
+    message("get cached matrix")
     return(m)
   }
 ## use the get function input from the makeCacheMatrix function
   data <- x$get()
   m <- solve(data, ...)
-## solve/ inverse the matrix input
+## solve / create the inverse the matrix input
   x$setsolve(m)
   m
 }
